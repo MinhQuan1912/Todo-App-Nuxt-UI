@@ -72,4 +72,9 @@ yarn preview
 bun run preview
 ```
 
+Run JSON Server:
+
+```bash
+npx json-server --watch db.json --port 3001
+
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
