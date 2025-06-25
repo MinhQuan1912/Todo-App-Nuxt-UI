@@ -1,0 +1,194 @@
+@import "@nuxt/ui";
+@import "tailwindcss";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  color: black;
+  font-family: "Arial", sans-serif;
+}
+
+.title {
+  padding-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 40px;
+}
+
+#add-icon {
+  color: #e3550d;
+}
+
+.todo-app {
+  width: 400px;
+  height: 600px;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 0px 15px 15px 15px;
+  background-color: #dddddd;
+  overflow-y: scroll;
+}
+
+.todo-app::-webkit-scrollbar {
+  width: 0 !important;
+}
+#add-button {
+  background-color: #fff;
+  cursor: pointer
+}
+#add-button:hover {
+  background-color: #f2f2f2;
+}
+#addNew {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 5px 0 5px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 50px;
+  font-size: 20px;
+  width: 100%;
+  border: none;
+}
+
+
+#tasks {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+  max-width: 100%;
+}
+.task-item > div:first-child {
+  padding: 5px;
+}
+.task-item > div:last-child {
+  padding: 5px;
+}
+.task-list-title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 0;
+}
+
+.task-item {
+  border: 5px solid #e78536;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+  max-width: 100%;
+  max-height: 250px;
+}
+
+.task-item-title {
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.task-item-content {
+  opacity: 0.6;
+  overflow-wrap: break-word;
+  white-space: normal;
+  font-size: 0.8rem;
+}
+
+.task-item-content p {
+  overflow-wrap: break-word;
+  max-height: 80px;
+  overflow: hidden;
+}
+
+.task-item-date {
+  font-size: 0.8rem;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  padding-top: 15px;
+  margin-top: -15px;
+  margin-bottom: 10px;
+  z-index: 4;
+  background-color: #dddddd;
+}
+
+.modal {
+  width: 500px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  height: 80vh;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.title-input,
+.desc-input {
+  width: 100%;
+  border: 2px solod #fff;
+  border-radius: 8px;
+}
+.form-field {
+  font-size: 1.2rem;
+}
+.modal-button {
+  align-self: center;
+  background-color: #e78536;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.modal-button:hover {
+  background-color: #d0742c;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.desc-input textarea {
+  height: 250px;
+}
+.modal-accept-delete-button {
+  align-self: center;
+  background-color: #23d629;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.modal-accept-delete-button:hover {
+  background-color: #23d629c7;
+}
+.modal-refuse-delete-button {
+  align-self: center;
+  background-color: #cf3131;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.modal-refuse-delete-button:hover {
+  background-color: #cf3131cc;
+}
+.modal-delete-button {
+  align-self: center;
+  background-color: #cf3131;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.modal-delete-button:hover{
+  background-color: #b71e1ee0;
+}
